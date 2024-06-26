@@ -12,7 +12,7 @@
       shell: 5
     realtime project: true
   tasks:
-  - name:print information
+  - name: print variables
     ansible.builtin.debug:
       msg: course: {{course}}. tools covered: {{tools}}. experience: {{experience}}. with realtime project: {{realtime project}}
 
