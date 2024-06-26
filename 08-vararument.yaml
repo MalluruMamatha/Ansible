@@ -1,4 +1,4 @@
-- name: variables from inventory level
+- name: variables from argument passing level
   hosts: localhost
   become: yes
   tasks:

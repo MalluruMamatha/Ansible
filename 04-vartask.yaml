@@ -1,4 +1,4 @@
-- name: variables
+- name: variables on task level
   hosts: localhost
   become: yes
   vars: # declering the variables
