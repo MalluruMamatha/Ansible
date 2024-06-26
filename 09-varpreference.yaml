@@ -6,16 +6,13 @@
   - name: "wishes"
     prompt: "enter wishes"
     private: "true"
-
   vars_files:
   - varfiles.yaml
-  
   vars:
     wishes: "morning from play variable"
   tasks:
-  
   vars:
     wishes: "morning from task level"
-  - name: print the given information
+  - name: print the information
     ansible.builtin.debug:
-      msg: "i am from{{wishes}}"
+      msg: "Hello, Good {{wishes}}"
