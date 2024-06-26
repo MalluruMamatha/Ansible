@@ -8,8 +8,8 @@
   #   private: false
   # vars_files:
   # - varfiles.yaml
-  vars:
-    wishes: "morning from play variable"
+  # vars:
+  #   wishes: "morning from play variable"
   tasks:
   - name: print the information
     # vars:
@@ -21,3 +21,4 @@
 # 2. Task Level
 # 3. varfiles
 # 4. prompt
+# 5. play level
