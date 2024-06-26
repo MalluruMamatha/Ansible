@@ -2,6 +2,6 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: print the given information
+  - name: get from args
     ansible.builtin.debug:
-      msg: "Hi {{person}},{{wishes}}"
+      msg: "Hi {{person}}, good {{wishes}}"
