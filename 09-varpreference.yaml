@@ -2,10 +2,10 @@
   hosts: localhost
   become: yes
 
-  vars_prompt:
-  - name: wishes
-    prompt: enter wishes
-    private: false
+  # vars_prompt:
+  # - name: wishes
+  #   prompt: enter wishes
+  #   private: false
   # vars_files:
   # - varfiles.yaml
   vars:
@@ -20,3 +20,4 @@
 # 1. arguments
 # 2. Task Level
 # 3. varfiles
+# 4. prompt
