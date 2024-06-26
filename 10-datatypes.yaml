@@ -10,7 +10,7 @@
       jenkins: 2
       ansible: 1
       shell: 5
-    Realtime Project: true
+    Realproject: true
   tasks:
   - name: print variables
     ansible.builtin.debug:
