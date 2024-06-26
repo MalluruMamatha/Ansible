@@ -12,10 +12,10 @@
     wishes: "morning from play variable"
   tasks:
   - name: print the information
-    vars:
-      wishes: "morning from task level"
+    # vars:
+    #   wishes: "morning from task level"
     ansible.builtin.debug:
       msg: "Hello, Good {{wishes}}"
 
 # 1. arguments
-# 2. prompt
+# 2. Task Level
