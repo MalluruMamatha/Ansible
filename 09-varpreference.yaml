@@ -5,7 +5,7 @@
   vars_prompt:
   - name: wishes
     prompt: enter wishes
-    private: true
+    private: false
   vars_files:
   - varfiles.yaml
   vars:
@@ -16,3 +16,6 @@
       wishes: "morning from task level"
     ansible.builtin.debug:
       msg: "Hello, Good {{wishes}}"
+
+# 1. arguments
+# 2. prompt
