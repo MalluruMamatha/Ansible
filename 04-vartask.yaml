@@ -1,12 +1,14 @@
 - name: variables
   hosts: localhost
   become: yes
-  vars:
+  vars: # declering the variables
     name: "mamatha"
     place: "bangalore"
   tasks:
   - name: print the override information
-    vars:
+    vars: # declering the variables on task level
       place: chennai
     ansible.builtin.debug:
       msg: "i am {{name}} from {{place}}"
+
+  #output: i am mamatha from chennai
