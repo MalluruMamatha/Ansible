@@ -3,16 +3,16 @@
   become: yes
 
   vars_prompt:
-  - name: "wishes"
-    prompt: "enter wishes"
-    private: "true"
+  - name: wishes
+    prompt: enter wishes
+    private: true
   vars_files:
   - varfiles.yaml
   vars:
     wishes: "morning from play variable"
   tasks:
-  vars:
-    wishes: "morning from task level"
   - name: print the information
+    vars:
+      wishes: "morning from task level"
     ansible.builtin.debug:
       msg: "Hello, Good {{wishes}}"
