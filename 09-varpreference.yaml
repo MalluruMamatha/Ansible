@@ -1,0 +1,21 @@
+- name: variables
+  hosts: localhost
+  become: yes
+
+  vars_prompt:
+  - name: "wishes"
+    prompt: "enter wishes"
+    private: "true"
+
+  vars_files:
+  - varfiles.yaml
+  
+  vars:
+    wishes: "morning from play variable"
+  tasks:
+  
+  vars:
+    wishes: "morning from task level"
+  - name: print the given information
+    ansible.builtin.debug:
+      msg: "i am from{{wishes}}"

@@ -2,6 +2,8 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: get information
+  - name: get information from args
     ansible.builtin.debug:
       msg: "Hi {{person}}, good {{wishes}}"
+
+  # pass the values from outside,through command -e person=mamatha -e wishes=morning
