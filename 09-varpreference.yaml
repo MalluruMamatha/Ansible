@@ -6,8 +6,8 @@
   - name: wishes
     prompt: enter wishes
     private: false
-  vars_files:
-  - varfiles.yaml
+  # vars_files:
+  # - varfiles.yaml
   vars:
     wishes: "morning from play variable"
   tasks:
@@ -19,3 +19,4 @@
 
 # 1. arguments
 # 2. Task Level
+# 3. varfiles
