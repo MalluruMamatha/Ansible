@@ -1,7 +1,7 @@
 - name: data types
   hosts: localhost
   vars:
-    Course: Devops with AWS
+    Course: DevOps with AWS
     Tools:
     - jenkins
     - ansible
