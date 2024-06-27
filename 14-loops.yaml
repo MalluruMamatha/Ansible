@@ -10,3 +10,8 @@
       - nginx
       - mysql
       - postfix
+    - name: start and enable the services
+      ansible.builtin.service:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
