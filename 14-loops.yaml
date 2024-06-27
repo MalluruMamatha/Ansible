@@ -10,25 +10,17 @@
     - nginx
     - mysql
     - postfix
-  # - name: start and enable the services
-  #   ansible.builtin.service:
-  #     name: "{{ item }}"
-  #     state: started
-  #     enabled: yes
-  #   loop:
-  #   - nginx
-  #   - mysql
-  #   - postfix
-  # - name: start and enable the services
-  #   ansible.builtin.service:
-  #     name: "{{ item }}"
-  #     state: started
-  #     enabled: yes
-  #   loop:
-  #   - nginx
-  #   - mysql
-  #   - postfix
-    
-    
-      
-        
+  # i want to install mysql not others,refer below code
+
+- name: install packages
+  hosts: web
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.dnf:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: 'mysql', state: 'latest'} # item
+    - { name: 'nginx', state: 'absent'}
+    - { name: 'postfix', state: 'absent'}
