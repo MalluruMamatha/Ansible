@@ -7,3 +7,13 @@
       msg: " Hi, {{wishes | default ('Good Morning') }}"
 
 # here i am giving variable "wishes=Morning"as default
+
+- name: upper case
+  hosts: localhost
+  become: yes
+  vars:
+    name: "i am mamatha"
+  tasks:
+  - name: print upper case
+    ansible.builtin.debug:
+      msg: "{{name | upper}}"
