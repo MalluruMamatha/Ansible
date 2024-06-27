@@ -37,3 +37,13 @@
   - name: print maximum number
     ansible.builtin.debug:
       msg: "max number is: {{numbers | max}}, min number is: {{numbers | min}}"
+
+- name: remove duplicates
+  hosts: localhost
+  become: yes
+  vars:
+    numbers: [1,2,2,3,3,4,5,5]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{numbers | uniqe}}"
