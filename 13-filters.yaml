@@ -8,12 +8,32 @@
 
 # here i am giving variable "wishes=Morning"as default
 
-- name: upper case
+- name: lower case
   hosts: localhost
   become: yes
   vars:
     name: "i am mamatha"
   tasks:
-  - name: print upper case
+  - name: print lower case
     ansible.builtin.debug:
-      msg: "{{name | upper}}"
+      msg: "{{name | lower}}"
+
+- name: lower case
+  hosts: localhost
+  become: yes
+  vars:
+    name: "I AM MAMATHA"
+  tasks:
+  - name: print lower case
+    ansible.builtin.debug:
+      msg: "{{name | lower}}"
+
+- name: max and min numbers
+  hosts: localhost
+  become: yes
+  vars:
+    numbers: [ 30,40,72,85 ]
+  tasks:
+  - name: print maximum number
+    ansible.builtin.debug:
+      msg: "max number is: {{max | numbers}}, min number is: {{min | numbers}}"
