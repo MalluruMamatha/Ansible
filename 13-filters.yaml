@@ -4,6 +4,6 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: " Hi, {{wishes | default ('Morning') }}"
+      msg: " Hi, {{wishes | default ('Good Morning') }}"
 
 # here i am giving variable "wishes=Morning"as default
