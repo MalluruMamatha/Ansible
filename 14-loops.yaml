@@ -6,6 +6,10 @@
     ansible.builtin.dnf:
       name: "{{ item}}"
       state: latest
+    loop:
+    - nginx
+    - mysql
+    - postfix
   - name: start and enable the services
     ansible.builtin.service:
       name: "{{ item }}"
@@ -15,6 +19,7 @@
     - nginx
     - mysql
     - postfix
+    
     
       
         
