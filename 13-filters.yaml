@@ -32,8 +32,8 @@
   hosts: localhost
   become: yes
   vars:
-    numbers: [ 30,40,72,85 ]
+    number: [ 30,40,72,85 ]
   tasks:
   - name: print maximum number
     ansible.builtin.debug:
-      msg: "max number is: {{max | numbers}}, min number is: {{min | numbers}}"
+      msg: "max number is: {{max | number}}, min number is: {{min | number}}"
