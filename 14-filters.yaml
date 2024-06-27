@@ -1,0 +1,9 @@
+- name: default value
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: print default value
+    ansible.builtin.debug:
+      msg: " Hi, {{wishes | default ('Morning') }}"
+
+# here i am giving variable "wishes=Morning"as default
